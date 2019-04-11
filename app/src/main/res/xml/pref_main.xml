@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+            android:key="pref_key_network_settings"
+            android:title="@string/pref_network_title">
+        <EditTextPreference
+            android:key="pref_ip"
+            android:title="@string/pref_ip_title" />
+        <EditTextPreference
+            android:key="pref_port"
+            android:title="@string/pref_port_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:key="pref_ui_settings"
+            android:title="@string/pref_ui_title">
+        <ListPreference
+                android:key="pref_thumbnail_count"
+                android:title="@string/pref_thumb_count_title"
+                android:summary="ListPreference"
+                android:entries="@array/entries_thumb_count_preference"
+                android:entryValues="@array/entry_values_thumb_count_preference"
+                android:dialogTitle="@string/pref_thumb_count_title" />
+        <ListPreference
+                android:key="pref_theme"
+                android:title="@string/pref_theme_title"
+                android:summary="ListPreference"
+                android:entries="@array/entries_theme_preference"
+                android:entryValues="@array/entry_values_theme_preference"
+                android:dialogTitle="@string/pref_theme_title"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

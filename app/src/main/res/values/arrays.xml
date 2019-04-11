@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entries_thumb_count_preference">
+        <item>1列</item>
+        <item>2列</item>
+        <item>3列</item>
+        <item>4列</item>
+        <item>5列</item>
+    </string-array>
+    <string-array name="entry_values_thumb_count_preference">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="entries_theme_preference">
+        <item>Sky</item>
+        <item>Green</item>
+    </string-array>
+    <string-array name="entry_values_theme_preference">
+        <item>back_sky</item>
+        <item>back_green</item>
+    </string-array>
+</resources>

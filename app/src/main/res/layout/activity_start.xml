@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_green"
+    tools:context="jp.ac.doshisha.projectn.virtualwindowcontroller.StartActivity">
+
+
+    <ImageView
+        android:id="@+id/d_logo"
+        android:layout_width="56dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/logo_doshisha_3x3lab"
+        app:layout_constraintBottom_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/titleText" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:text="@string/text_doshisha"
+        android:textAlignment="textStart"
+        android:textColor="@color/buttonWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/d_logo"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--<ImageView-->
+    <!--android:id="@+id/logo_nara"-->
+    <!--android:layout_width="28dp" android:layout_height="0dp"-->
+    <!--android:layout_marginStart="4dp"-->
+    <!--app:layout_constraintTop_toTopOf="@id/titleText" app:layout_constraintBottom_toBottomOf="@id/titleText"-->
+    <!--app:layout_constraintStart_toEndOf="@id/titleText"-->
+    <!--android:src="@drawable/logo_nara"/>-->
+    <!--<TextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content" android:id="@+id/naraText" android:layout_weight="1"-->
+    <!--android:textColor="@color/buttonWhite" android:textSize="24sp" android:textAlignment="textStart"-->
+    <!--android:text="@string/text_nara" app:layout_constraintTop_toTopOf="parent"-->
+    <!--android:layout_marginTop="8dp" app:layout_constraintStart_toEndOf="@id/logo_nara"-->
+    <!--android:layout_marginStart="4dp"/>-->
+    <TextView
+        android:id="@+id/systemText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:text="@string/text_system_name"
+        android:textAlignment="textStart"
+        android:textColor="@color/buttonWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/titleText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/connectionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:text="@string/text_default_status"
+        android:textAlignment="textEnd"
+        android:textColor="@color/buttonWhite"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/side_bar"
+        android:layout_width="@dimen/sidebar_width"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText">
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sidebar_button_height"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ripple_button"
+            android:drawableStart="@drawable/arrow_right"
+            android:onClick="buttonOnClick"
+            android:paddingStart="@dimen/sidebar_padding_start"
+            android:paddingEnd="@dimen/sidebar_padding_end"
+            android:text="@string/btn_next"
+            android:textColor="@color/buttonWhite"
+            android:textSize="@dimen/btn_sideTextSize" />
+
+        <Button
+            android:id="@+id/button_previous"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sidebar_button_height"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ripple_button"
+            android:drawableStart="@drawable/arrow_left"
+            android:onClick="buttonOnClick"
+            android:paddingStart="@dimen/sidebar_padding_start"
+            android:paddingEnd="@dimen/sidebar_padding_end"
+            android:text="@string/btn_previous"
+            android:textColor="@color/buttonWhite"
+            android:textSize="@dimen/btn_sideTextSize" />
+
+        <Button
+            android:id="@+id/button_home"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sidebar_button_height"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ripple_button"
+            android:drawableStart="@drawable/home"
+            android:onClick="buttonOnClick"
+            android:paddingStart="@dimen/sidebar_padding_start"
+            android:paddingEnd="@dimen/sidebar_padding_end"
+            android:text="@string/btn_menu"
+            android:textColor="@color/buttonWhite"
+            android:textSize="@dimen/btn_sideTextSize" />
+
+        <Button
+            android:id="@+id/button_fullscreen"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sidebar_button_height"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ripple_button"
+            android:drawableStart="@drawable/fullscreen"
+            android:onClick="buttonOnClick"
+            android:paddingStart="@dimen/sidebar_padding_start"
+            android:paddingEnd="@dimen/sidebar_padding_end"
+            android:text="@string/btn_fullscreen"
+            android:textColor="@color/buttonWhite"
+            android:textSize="@dimen/btn_sideTextSize" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_setting"
+        android:layout_width="@dimen/sidebar_width"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ripple_button"
+        android:drawableStart="@drawable/account_settings_variant"
+        android:onClick="buttonOnClick"
+        android:paddingStart="@dimen/sidebar_padding_start"
+        android:text="@string/btn_setting"
+        android:textColor="@color/buttonWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/side_bar"
+        app:layout_constraintTop_toBottomOf="@id/titleText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_live"
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_button"
+                android:drawableTop="@drawable/camcorder"
+                android:onClick="buttonOnClick"
+                android:paddingTop="@dimen/btn_main_padding_top"
+                android:paddingBottom="@dimen/btn_main_padding_bottom"
+                android:text="@string/btn_live"
+                android:textColor="@color/buttonWhite"
+                android:textSize="@dimen/btn_textSize"
+                tools:ignore="NestedWeights" />
+
+            <Button
+                android:id="@+id/button_blank"
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_button"
+                android:drawableTop="@drawable/television_off"
+                android:onClick="buttonOnClick"
+                android:paddingTop="@dimen/btn_main_padding_top"
+                android:paddingBottom="@dimen/btn_main_padding_bottom"
+                android:text="@string/btn_blank"
+                android:textColor="@color/buttonWhite"
+                android:textSize="@dimen/btn_textSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_image"
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_button"
+                android:drawableTop="@drawable/image"
+                android:onClick="buttonOnClick"
+                android:paddingTop="@dimen/btn_main_padding_top"
+                android:paddingBottom="@dimen/btn_main_padding_bottom"
+                android:text="@string/btn_image"
+                android:textColor="@color/buttonWhite"
+                android:textSize="@dimen/btn_textSize" />
+
+            <Button
+                android:id="@+id/button_video"
+                style="@android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_button"
+                android:drawableTop="@drawable/filmstrip"
+                android:onClick="buttonOnClick"
+                android:paddingTop="@dimen/btn_main_padding_top"
+                android:paddingBottom="@dimen/btn_main_padding_bottom"
+                android:text="@string/btn_video"
+                android:textColor="@color/buttonWhite"
+                android:textSize="@dimen/btn_textSize" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

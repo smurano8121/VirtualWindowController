@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_textSize">38sp</dimen>
+    <dimen name="btn_sideTextSize">24sp</dimen>
+
+    <dimen name="btn_main_padding_top">20dp</dimen>
+    <dimen name="btn_main_padding_bottom">15dp</dimen>
+    <dimen name="btn_main_drawable_size">75dp</dimen>
+
+    <dimen name="sidebar_width">200dp</dimen>
+    <dimen name="sidebar_button_height">80dp</dimen>
+    <dimen name="sidebar_padding_start">5dp</dimen>
+    <dimen name="sidebar_padding_end">0dp</dimen>
+    <dimen name="sidebar_drawable_size">30dp</dimen>
+</resources>
